@@ -40,7 +40,7 @@
       <nav id="navigation" class="nav-bar">
         <a class="nav-bar-title"></i>Title<span class="nav-bar-exit"><label for="nav-bar-toggle"<i class="fa fa-times-circle" aria-hidden="true"></i></label></span></a>
 
-        <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
           
         <a class="hover active" href="login-page.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
           
