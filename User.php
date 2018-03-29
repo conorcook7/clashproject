@@ -1,4 +1,6 @@
 <?php
+	require_once 'Dao.php';
+
 class User {
 	protected $username;
 	protected $password;
@@ -13,7 +15,7 @@ class User {
 	}
 
 	public function getUser ($username) {
-		*/ stuff to get a user
+		/* stuff to get a user*/
 	}
 }
 $user = new User("ccook", "hello");

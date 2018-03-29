@@ -1,8 +1,15 @@
+<?php
+session_start();
+require_once 'Dao.php';
+$dao = new Dao();
+
+?>
 <html>
   <head>
     <title>Progress Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="navigation.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
@@ -16,43 +23,8 @@
   </head>
   <body>
     
-<div class="banner">
-  <div class="logo img">
-    <a href=""><img src="clash.svg" width="400" height="340"/></a>
-  </div>
-  <div class="name">
-     <h1>Conor Cook</h1>
-     <h3>&ldquo;Web Dev&rdquo; Novice</h3>
-     <h3>Homework #4</h3>
-  </div>
-</div>
-<div class="nav-bar-containter clear">
-      <input type="checkbox" id="nav-bar-toggle">
-      <header class="clear">
-        <div id="menu-btn">
-          <label for="nav-bar-toggle" class="toggle-btn"><i class="fa fa-bars"></i> Progress Tracker</label>
-        </div>
-
-        <div class="login-btn-area"><a href="login-page.php">Login   <i class="fa fa-sign-in" aria-hidden="true"></i></a>
-        </div>
-      </header>
-
-      <nav id="navigation" class="nav-bar">
-        <a class="nav-bar-title"></i>Title<span class="nav-bar-exit"><label for="nav-bar-toggle"<i class="fa fa-times-circle" aria-hidden="true"></i></label></span></a>
-
-        <a href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-          
-        <a href="login-page.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
-          
-        <a href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
-          
-        <a class="hover active" href="progress-tracker-home.php"><i class="fa fa-tasks" aria-hidden="true"></i>Progress Tracker</a>
-          
-        <a href="profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a>
-        
-        <a href="privacy.php"><i class="fa fa-user-secret" aria-hidden="true"></i>Privacy</a>
-      </nav>
-</div>
+  <?php include_once 'banner.php';?>
+  <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php';?>
     <div class="content">
       <h1>Welcome to the Progress Tracker!</h1>
           <hr />
@@ -65,11 +37,7 @@
               <p>Great question, I have no idea. At this point, it still may be beyond this class's skope, we will see.</p>
             </div>
     </div>
-    <div id="footer">
-        <li class="first">&copy;2018  Conor Cook</li>
-        <li><a href="">Boise State University</a></li>
-        <li><a href="">College of Engineering</a></li>
-        <li><a href="">Computer Science Department</a></li>
-    </div>
+</div>
+<?php include_once 'footer.php'; ?>
   </body>
 </html>

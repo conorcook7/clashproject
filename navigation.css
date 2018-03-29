@@ -38,11 +38,10 @@ nav .active .fa{color: #ff3333;}
 nav li:last-child a{border-bottom: none;}
 
 .nav-bar{
-	padding-top: 80px;
-	width: 225px;
-	height: 100%;
-	left: -225px;
 	position: absolute;
+	width: 225px;
+	height: 81.9%;
+	left: -225px;
 	background: #181818;
 	z-index: 1;
 	transition: all .3s ease-in-out;
@@ -51,7 +50,11 @@ nav li:last-child a{border-bottom: none;}
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 }
-
+.nav-bar-container{
+	height: 50px;
+	margin: 0 auto;
+	width: 100%;
+} 
 
 #nav-bar-toggle{display: none;}
 
@@ -76,6 +79,30 @@ nav li:last-child a{border-bottom: none;}
 .nav-bar-exit{
 	margin-left: 70%;
 }
-.nav-bar-title{
+
+
+header{
+	height: 20px;
+	padding: 5px;
+	background-color: #181818;
+	z-index: 1;
+  }
+  header .login-btn-area{
+	float: right;
+	margin-right: 5%;
+	display: inline-block;
+  }
+  
+  header .login-btn-area a:hover{
+	color: rgba(255,255,255, 1);
+  }
+  
+  header .login-btn-area a{
+	text-decoration: none;
+	color: rgba(255,255,255, 0.8);
+	font-size: 18px;
+  }
+.logout-button{
+	padding-left: 30px;
 
 }
