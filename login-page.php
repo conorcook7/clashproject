@@ -55,7 +55,6 @@
         
         <div id="sign-in" class="column">
          <h3>Need to make an account?</h3>
-         <h5>Please Register Below</h5>
          
             <?php
               if(isset($_SESSION['reg_con_message'])){
@@ -66,7 +65,9 @@
                   foreach($_SESSION['regmessages'] as $regmessage) {
                     echo "<div class='regmessage'>$regmessage</div>";
                   }
-              }
+              }else{ ?>
+                <h5>Please Register Below</h5>
+              <?php }
                 unset($_SESSION['regmessages']);
                 unset($_SESSION['reg_con_message']);?>
 

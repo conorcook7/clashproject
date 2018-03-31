@@ -31,7 +31,7 @@ public function createUser(){
         /*$stmt->bindValue(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));    */
         $stmt->bindValue(':password', $_POST['password']);
         if($stmt->execute()):
-            return $message= 'Successfully created a user.';
+            return $message= 'Successfully created a user. Please login to your new account.';
         else:
             return $message= 'Sorry, there was an issue creating your account :(';
         endif;

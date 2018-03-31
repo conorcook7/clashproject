@@ -36,7 +36,7 @@ $dao = new Dao();
             <li><a href="progress-tracker-overall.php">Overall</a></li>
           </ul>
         </div>
-        <h3>Set the levels of your current defensive buildings</h3>
+        <h2 class="title">Set the levels of your current defensive buildings</h2>
         <form method="POST" name="defense-form" action="">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="script.js"></script>

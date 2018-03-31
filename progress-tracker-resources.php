@@ -9,6 +9,7 @@ $dao = new Dao();
     <title>Resources-Progress Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="navigation.css" />
+    <link rel="stylesheet" type="text/css" href="progress.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">

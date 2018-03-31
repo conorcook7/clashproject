@@ -40,7 +40,6 @@ nav li:last-child a{border-bottom: none;}
 .nav-bar{
 	position: absolute;
 	width: 225px;
-	height: 81.9%;
 	left: -225px;
 	background: #181818;
 	z-index: 1;
@@ -79,8 +78,6 @@ nav li:last-child a{border-bottom: none;}
 .nav-bar-exit{
 	margin-left: 70%;
 }
-
-
 header{
 	height: 20px;
 	padding: 5px;

@@ -29,3 +29,17 @@ input[type="submit"]:hover{
 #sign-in.column{
     height: 400px;
 }
+
+.message, .regmessage{
+    padding: 5px;
+    background-color: red;
+    color:white;
+    width: 78%;
+    margin-bottom: 2px;
+}
+.reg_con_message{
+    padding: 5px;
+    background-color: green;
+    color:white;
+    width: 78%;
+}
