@@ -6,7 +6,7 @@ $dao = new Dao();
 ?>
 <html>
   <head>
-    <title>Progress Tracker</title>
+    <title>Army-Progress Tracker</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="navigation.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
@@ -26,18 +26,18 @@ $dao = new Dao();
   <?php include_once 'banner.php';?>
   <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php';?>
     <div class="content">
-      <h1>Welcome to the Progress Tracker!</h1>
-          <hr />
-      <div class="row"> 	
-            <div class="column"><h3>What can you track?</h3>
-              <p>I am going to implement a system where yoou input your current levels of buildings and the plan is that it will be able to take this information in and give you back a time and resource amount needed to max upgrade your base.</p>
-            </div>
-            <div class="column">
-              <h3>When will this be operational?</h3>
-              <p>Great question, I have no idea. At this point, it still may be beyond this class's skope, we will see.</p>
-            </div>
-      </div>
+        <div class = "progress-nav"> 
+          <ul>
+            <li><a href="progress-tracker-defense.php">Defenses</a></li>
+            <li class="progress-active"><a href="progress-tracker-army.php">Army</a></li>
+            <li><a href="progress-tracker-research.php">Research</a></li>
+            <li><a href="progress-tracker-resources.php">Resources</a></li>
+            <li><a href="progress-tracker-overall.php">Overall</a></li>
+          </ul>
+        </div>
+      
     </div>
+
 <?php include_once 'footer.php'; ?>
   </body>
 </html>
