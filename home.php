@@ -31,7 +31,8 @@ $dao = new Dao();
       <h3>What is Clash of Clans Empire?</h3>
       <p>Clash Of Clans Empire is a small website tool that gives you a little extra information about your account. This tool 
         allows you to utilize the progression tracker to give you the total amount of gold, elixir, and time requirements left
-        for your upgrades. This way you can see how much more of your life you have to put into this game to max out your base!</p>
+        for your upgrades. This way you can see how much more of your life you have to put into this game to max out your base!
+      So please login in the top right-hand corner and get started!</p>
     </div>
 
     <div class="home_section right">

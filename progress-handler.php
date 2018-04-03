@@ -277,7 +277,7 @@ print_r('skeleteon trap: '.$skel_trap_cost . '-----'. $skel_trap_time);?><br/><?
 $_SESSION['overall-total-cost'] = $mortar_total_cost + $archer_total_cost + $cannon_total_cost + $wizard_total_cost
                                 + $air_def_total_cost + $air_sweep_total_cost + $eag_art_cost + $inf_tow_cost + $bomb_tow_total_cost
                                 + $hid_tes_total_cost + $xbow_total_cost + $bombs_cost + $gia_bom_cost + $air_bomb_cost 
-                                + $air_mine_cost + $spring_trap_cost + $skel_trap_cost + 1;
+                                + $air_mine_cost + $spring_trap_cost + $skel_trap_cost ;
 $_SESSION['overall-total-time'] = $mortar_total_time + $archer_total_time + $cannon_total_time + $wizard_total_time 
                                 + $air_def_total_time + $air_sweep_total_time + $eag_art_time + $inf_tow_time + $bomb_tow_total_time
                                 + $hid_tes_total_time + $xbow_total_time + $bombs_time + $gia_bom_time + $air_bomb_time

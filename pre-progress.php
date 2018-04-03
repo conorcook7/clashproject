@@ -1,18 +1,14 @@
-<?php
+<?php 
 session_start();
 require_once 'Dao.php';
 $dao = new Dao();
-
-if(isset($_SESSION['user_id'])){
-  header("Location: pre-progress.php");
-}
 ?>
 <html>
   <head>
-    <title>Progress Tracker</title>
+    <title>Progress</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="navigation.css" />
-    <link rel="stylesheet" type="text/css" href="progress.css" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -25,10 +21,10 @@ if(isset($_SESSION['user_id'])){
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body>
-    
-  <?php include_once 'banner.php';?>
-  <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php';?>
+<body>    
+  <?php 
+  include_once 'banner.php';
+  $page = 'progress-tracker-home.php'; include_once 'navigation.php';?>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="script.js"></script>
     <div class="content">
@@ -43,16 +39,24 @@ if(isset($_SESSION['user_id'])){
           that indicates that you have not built it yet.
         </p>
         <p>Try It Out!!</p>
-        <input id="try1" name="try1" type="range" min="0" max="15" step="1" onchange="trySlider()" value="0">
+        <input id="try1" name="try1" type="range" min="0" max="15" step="1" onchange="trySlider2()" value="0">
         <output id="tryslide2"></output>
       </div>
+      <?php if(isset($_SESSION['overall-total-cost'])){?>
+            <div class="home_section_2">
+                <h3>Your results have been found, please go to the overall page!</h3>
+                <form action="progress-tracker-overall.php">
+                    <input type="submit" value="Get Results!">
+                </form>
+            </div>
+      <?php }else{ ?>
       <div class="home_section">
-        <h3>Please Sign-In or Sign-Up!</h3>
-        <p>You have to make an account to be able to use this tool! If you already have an account
-          with us, simply login and we will direct you to the correct page!
-        </p>
-      </div>
+          <h3>Think you are ready chief?!</h3>
+          <form action="progress-tracker-defense.php">
+              <input type="submit" value="Get Started!">
+          </form>
+      </div> <?php } ?>
     </div>
-<?php include_once 'footer.php'; ?>
-  </body>
+  <?php include_once 'footer.php'; ?>
+</body>
 </html>

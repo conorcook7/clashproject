@@ -197,6 +197,11 @@ hr {
   font-size: 1.15em;
   line-height: 1.4em;
 }
+.home_section_2{
+  padding:15px;
+  width: 50%;
+  line-height: 1.2em;
+}
 .right{
   float: right;
   padding-right: 30px;

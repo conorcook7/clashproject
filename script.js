@@ -86,6 +86,16 @@ function arch_tow_Slider(){
         document.getElementById('bom_tow_slide1').innerHTML = val1;
         document.getElementById('bom_tow_slide2').innerHTML = val2;
     }
+    function trySlider(){
+        var val1 = document.getElementById('try').value;
+        var val2 = document.getElementById('try1').value;
+        document.getElementById('tryslide1').innerHTML = val1;
+        document.getElementById('tryslide2').innerHTML = val2;
+    }
+    function trySlider2(){
+        var val1 = document.getElementById('try1').value;
+        document.getElementById('tryslide2').innerHTML = val1;
+    }
     function xbow_Slider(){
         var val1 = document.getElementById('xbow1').value;
         var val2 = document.getElementById('xbow2').value;

@@ -12,6 +12,7 @@ if(!isset($_SESSION['user_id'])){
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="navigation.css" />
     <link rel="stylesheet" type="text/css" href="progress.css" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -27,9 +28,7 @@ if(!isset($_SESSION['user_id'])){
   <body>
     
   <?php include_once 'banner.php';?>
-  <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php'; 
-  $cost_total = $_SESSION['overall-total-cost'];
-  $time_total = $_SESSION['overall-total-time'];?>
+  <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php'; ?>
     <div class="content">
         <div class = "progress-nav"> 
           <ul>
@@ -45,6 +44,8 @@ if(!isset($_SESSION['user_id'])){
         <div>
 
       <?php if(isset($_SESSION['overall-total-cost'])){
+        $cost_total = $_SESSION['overall-total-cost'];
+        $time_total = $_SESSION['overall-total-time'];
          $mortar_total_cost = $_SESSION['mortar_total_cost']; $mortar_total_time = ($_SESSION['mortar_total_time'] /5)/24;
          $archer_total_cost = $_SESSION['archer_total_cost']; $archer_total_time = ($_SESSION['archer_total_time']/5)/24;
          $cannon_total_cost = $_SESSION['cannon_total_cost']; $cannon_total_time = ($_SESSION['cannon_total_time']/5)/24;
@@ -182,9 +183,14 @@ if(!isset($_SESSION['user_id'])){
 	          </tbody>
           </table>
 
-      <?php }?>
-
-          
+      <?php }else{ ?>
+            <div class="home_section">
+              <h3>Please Set your values!</h3>
+              <form action="progress-tracker-defense.php">
+              <input type="submit" value="Go to Defenses!">
+              </form>
+            </div>
+      <?php } ?>
     
         </div>
     </div>
