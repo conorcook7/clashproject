@@ -63,8 +63,8 @@ $dao = new Dao();
         -->
         <a class="<?php if($page == 'progress-tracker-home.php'){echo 'hover active';}?>" href="progress-tracker-home.php"><i class="fa fa-tasks" aria-hidden="true"></i>Progress Tracker</a>
           
-        <a class="<?php if($page == 'profile.php'){echo 'hover active';}?>" href="profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a>
-        
+        <!--<a class="<?php if($page == 'profile.php'){echo 'hover active';}?>" href="profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a>
+          -->
         <a class="<?php if($page == 'privacy.php'){echo 'hover active';}?>" href="privacy.php"><i class="fa fa-user-secret" aria-hidden="true"></i>Privacy</a>
       </nav>
 </div>

@@ -32,14 +32,11 @@ if(isset($_SESSION['user_id'])){
     <div class="content">
       <h1>Welcome to the Progress Tracker!</h1>
           <hr />
-      <div class="row"> 	
-            <div class="column"><h3>What can you track?</h3>
-              <p>I am going to implement a system where yoou input your current levels of buildings and the plan is that it will be able to take this information in and give you back a time and resource amount needed to max upgrade your base.</p>
-            </div>
-            <div class="column">
-              <h3>When will this be operational?</h3>
-              <p>Great question, I have no idea. At this point, it still may be beyond this class's skope, we will see.</p>
-            </div>
+      <div class="home_section">
+        <h3>How does the Progression Tracker Work?</h3>
+      </div>
+      <div class="home_section">
+        <h3>Please Sign-In or Sign-Up!</h3>
       </div>
     </div>
 <?php include_once 'footer.php'; ?>

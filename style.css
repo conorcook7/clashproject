@@ -49,6 +49,7 @@ h1{
   margin-top: 15px;
   font-size: 25px;
   letter-spacing: .1em;
+  line-height: 1.3em;
 }
 .name h1 {
   text-shadow: 0.09em 0.02em #333;
@@ -184,4 +185,22 @@ hr {
 .privacy li{
   line-height: 1.8em;
   padding: 5px;
+}
+
+.home_section{
+  padding: 15px;
+  width: 40%;
+  line-height: 1.2em;
+  
+}
+.home_section > p{
+  font-size: 1.15em;
+  line-height: 1.4em;
+}
+.right{
+  float: right;
+  padding-right: 30px;
+}
+.left{
+  float: left;
 }

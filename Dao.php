@@ -45,19 +45,6 @@ public function createUser(){
           $results= $records->fetch(PDO::FETCH_ASSOC);
           return $results;
     }
-/*
-    public function userExist(){
-        $conn =$this->getConnection();
-        $records = $conn->prepare('SELECT * FROM users WHERE email = :email');
-        $records->bindValue(':email', $_SESSION['user_email']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
-        if(isset($results)){
-            return true;
-        }else{
-        return false;
-        }
-    }*/
     public function userExists($email){
         $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
         $query = "SELECT * FROM users WHERE email = '$email'";
@@ -76,6 +63,212 @@ public function createUser(){
         }else{
             return false;
         }
+    }
+    public function getMortarInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM mortar WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $mortar = array($cost,$time);
+        return $mortar;
+    }
+    public function getArcherTowerInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM archer_tower WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $archer = array($cost,$time);
+        return $archer;
+    }
+    public function getCannonInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM cannon WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $cannon = array($cost,$time);
+        return $cannon;
+    }
+
+    public function getWizTowerInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM wizard_tower WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $wiz = array($cost,$time);
+        return $wiz;
+    }
+
+    public function getAirDefInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM air_defense WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $air_def = array($cost,$time);
+        return $air_def;
+    }
+    public function getAirSweepInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM air_sweeper WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $air_sweep = array($cost,$time);
+        return $air_sweep;
+    }
+    public function getHiddenTeslaInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM hidden_tesla WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $hid = array($cost,$time);
+        return $hid;
+    }
+    public function getBombTowerInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM bomb_tower WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $bom_tow = array($cost,$time);
+        return $bom_tow;
+    }
+    public function getXbowInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM xbow WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $xbow = array($cost,$time);
+        return $xbow;
+    }
+    public function getInfernoTowerInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM inferno_tower WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $inferno = array($cost,$time);
+        return $inferno;
+    }
+    public function getEagleArtilleryInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM eagle_art WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $eag_art = array($cost,$time);
+        return $eag_art;
+    }
+    public function getBombsInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM bombs WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $bombs = array($cost,$time);
+        return $bombs;
+    }
+    public function getGiantBombInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM giant_bomb WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $gia_bom = array($cost,$time);
+        return $gia_bom;
+    }
+    public function getAirBombInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM air_bomb WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $air_bom = array($cost,$time);
+        return $air_bom;
+    }
+    public function getSeekingMineInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM seeking_air_mine WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $air_mine = array($cost,$time);
+        return $air_mine;
+    }
+    public function getSpringTrapInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM spring_trap WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $spring = array($cost,$time);
+        return $spring;
+    }
+    public function getSkeletonTrapInfo($curLevel){
+        $conn = mysqli_connect("us-cdbr-iron-east-05.cleardb.net","be06b20f27baf5","5cca60d0","heroku_69febf880d332ff");
+        $query = "SELECT level,cost,time FROM skeleton_trap WHERE level > '$curLevel'";
+        $user_data = mysqli_query($conn, $query);
+        $cost = 0; $time = 0;
+        while($result = mysqli_fetch_array($user_data)){
+            $cost += $result[1];
+            $time += $result[2];
+        }
+        $skel = array($cost,$time);
+        return $skel;
     }
 }
 

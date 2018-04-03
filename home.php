@@ -27,30 +27,23 @@ $dao = new Dao();
   <div class="content">
     <h1>Welcome to Clash of Clans Empire!</h1>
       <hr />
-    <div class="row"> 	
-      <div class="column"><h3>What is this site?</h3>
-        <p>This site is a tool to help highten your experience playing Clash of Clans. This tool will help you view your current progress and profile in a convenient fashion!</p>
-        <p>There will be more coming!</p>
-      </div>
-      <div class="column">
-        <h3>How does this site work?</h3>
-        <p>In the future there will be a detailed set of instructions, please be patient!</p>
-      </div>
-    <div class="row">
-      <div class="column">
-       <h3>Have any recommendations?</h3>
-       <p>If you have any specific requests or recommendations, please let me know!</p>
-       <div id="contact">
-         <p><a href="">conorcook@u.boisestate.edu</a></p>
-         <div class="clear"></div>
-       </div>
-      </div>
-      <div class="column">
-       <h3>There is more on the horizon. Much more.</h3>
-        <p>Like I said, before, please be patient as this website is a work in progress. It will be awesome.</p>
-      </div>
-     </div>
-     <div class"clear"></div>
+    <div class="home_section left">
+      <h3>What is Clash of Clans Empire?</h3>
+      <p>Clash Of Clans Empire is a small website tool that gives you a little extra information about your account. This tool 
+        allows you to utilize the progression tracker to give you the total amount of gold, elixir, and time requirements left
+        for your upgrades. This way you can see how much more of your life you have to put into this game to max out your base!</p>
+    </div>
+
+    <div class="home_section right">
+      <h3>Progress Tracker</h3>
+      <p>The progression tracker is currently under development. Currently you are able to get the totals for all of your defensive
+        buildings! Signin or make an account to gain access to this amazing tool to see how much work you have left Chief!</p>
+    </div>
+    <div class"clear"></div>
+    <div class="home_section">
+      <h3>More Features Coming!</h3>
+      <p>In the future there will be capabilities for looking at all of your elixir upgrades and research as well. 
+        Maybe even the Builder Base! Until then, you better get started on your upgrades now Chief!</p>
     </div>
   </div>
   <?php include_once 'footer.php'; ?>

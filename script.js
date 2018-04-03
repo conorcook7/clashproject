@@ -162,11 +162,13 @@ function arch_tow_Slider(){
         var val3 = document.getElementById('spring_trap3').value;
         var val4 = document.getElementById('spring_trap4').value;
         var val5 = document.getElementById('spring_trap5').value;
+        var val6 = document.getElementById('spring_trap6').value;
         document.getElementById('spring_trap_slide1').innerHTML = val1;
         document.getElementById('spring_trap_slide2').innerHTML = val2;
         document.getElementById('spring_trap_slide3').innerHTML = val3;
         document.getElementById('spring_trap_slide4').innerHTML = val4;
         document.getElementById('spring_trap_slide5').innerHTML = val5;
+        document.getElementById('spring_trap_slide6').innerHTML = val6;
     }
     function skel_trap_Slider(){
         var val1 = document.getElementById('skel_trap1').value;

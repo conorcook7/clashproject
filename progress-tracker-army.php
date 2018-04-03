@@ -36,7 +36,7 @@ $dao = new Dao();
             <li><a href="progress-tracker-overall.php">Overall</a></li>
           </ul>
         </div>
-      
+        <h2 class="title">Coming Soon.</h2>
     </div>
 
 <?php include_once 'footer.php'; ?>
