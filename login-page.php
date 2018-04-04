@@ -49,7 +49,6 @@
             <input type="password" placeholder="Password" name="password" required>
             <input type="submit">
           </form>
-          <h5>Forgot Password?</h5>
         </div>
 
         

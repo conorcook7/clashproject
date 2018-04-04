@@ -43,7 +43,7 @@ if(isset($_SESSION['user_id'])){
           that indicates that you have not built it yet.
         </p>
         <p>Try It Out!!</p>
-        <input id="try1" name="try1" type="range" min="0" max="15" step="1" onchange="trySlider()" value="0">
+        <input id="try1" name="try1" type="range" min="0" max="15" step="1" onchange="trySlider2()" value="0">
         <output id="tryslide2"></output>
       </div>
       <div class="home_section">
