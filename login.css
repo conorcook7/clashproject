@@ -43,10 +43,6 @@ input[type="submit"]:hover{
     color:white;
     width: 78%;
 }
-#messages{
-    /*display: none;*/
-  /*  visibility: hidden;*/
-}
 .exit-btn{
     float: right;
 }

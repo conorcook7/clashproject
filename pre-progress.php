@@ -42,6 +42,8 @@ $dao = new Dao();
         <input id="try1" name="try1" type="range" min="0" max="15" step="1" onchange="trySlider2()" value="0">
         <output id="tryslide2"></output>
       </div>
+
+      <!-- Shows this if you are logged in and have already processed your results-->
       <?php if(isset($_SESSION['overall-total-cost'])){?>
             <div class="home_section_2">
                 <h3>Your results have been found, please go to the overall page!</h3>
@@ -50,6 +52,8 @@ $dao = new Dao();
                 </form>
             </div>
       <?php }else{ ?>
+
+      <!-- Shows this if you have not yet processed results-->
       <div class="home_section">
           <h3>Think you are ready chief?!</h3>
           <form action="progress-tracker-defense.php">

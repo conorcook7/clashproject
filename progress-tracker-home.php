@@ -24,13 +24,13 @@ if(isset($_SESSION['user_id'])){
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     
   <?php include_once 'banner.php';?>
   <?php $page = 'progress-tracker-home.php'; include_once 'navigation.php';?>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="script.js"></script>
     <div class="content">
       <h1>Welcome to the Progress Tracker!</h1>
           <hr />

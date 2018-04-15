@@ -25,7 +25,8 @@ if(!isset($_SESSION['user_id'])){
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
   <?php include_once 'banner.php';?>
@@ -45,8 +46,8 @@ if(!isset($_SESSION['user_id'])){
         </div>
         <h2 class="title">Set the levels of your current defensive buildings</h2>
         <form method="POST" action="progress-handler.php">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="script.js"></script>
+            <!-- Has the list of all the slider inputs with session variable checks to see 
+                 if previous values have already been set.          -->
             <div class="list">
 
                 <h4> Cannons <img src="images/Defenses/Cannon15.png" alt="cannon level 15"></h4>
@@ -847,7 +848,7 @@ if(!isset($_SESSION['user_id'])){
                     </li>
                 </ul><br/>
 
-                <!--
+                <!-- COMING IN NEXT UPDATE
                 <h4> Walls <img src="images/Defenses/Wall12.png" alt="wall level 12"></h4>
                 <ul class ="wall-list">
                     <li>

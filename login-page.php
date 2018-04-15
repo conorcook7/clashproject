@@ -36,6 +36,7 @@
         <div id="sign-in" class="column">
           <h3>Have an account already?</h3>
           <?php
+              /* This the error messages for the login portion*/
               if (isset($_SESSION['messages'])) {
                   $var1 = 1;
                   foreach($_SESSION['messages'] as $message) {
@@ -58,6 +59,7 @@
          <h3>Need to make an account?</h3>
          
             <?php
+            /* This shows either the confirmation messages or error messages for the register portion*/
               if(isset($_SESSION['reg_con_message'])){
                 $confirm = $_SESSION['reg_con_message'];
                 echo "<div class='reg_con_message'>$confirm</div>";
@@ -71,6 +73,7 @@
               }else{ ?>
                 <h5>Please Register Below</h5>
               <?php }
+              /* Makes sure that the messages are unset for when the page is refreshed*/
                 unset($_SESSION['regmessages']);
                 unset($_SESSION['reg_con_message']);?>
 

@@ -2,7 +2,7 @@
 session_start();
 require_once 'Dao.php';
 $dao = new Dao();
-//set values
+//set values for inputs
 $_SESSION['cannon-1-val'] = $_POST["can1"];
 $_SESSION['cannon-2-val'] = $_POST["can2"];
 $_SESSION['cannon-3-val'] = $_POST["can3"];
@@ -235,6 +235,7 @@ $skel_trap_cost = 0; $skel_trap_time = 0;
 $skel_trap_cost = $skel_trap1[0] + $skel_trap2[0] + $skel_trap3[0];
 $skel_trap_time = $skel_trap1[1] + $skel_trap2[1] + $skel_trap3[1];
 
+// Set the values into session variables to be used elsewhere
 $_SESSION['mortar_total_cost'] = $mortar_total_cost; $_SESSION['mortar_total_time'] = $mortar_total_time;
 $_SESSION['archer_total_cost'] = $archer_total_cost ;  $_SESSION['archer_total_time'] = $archer_total_time ;
 $_SESSION['cannon_total_cost'] = $cannon_total_cost ; $_SESSION['cannon_total_time'] = $cannon_total_time ;
@@ -273,7 +274,7 @@ print_r('spring trap: '.$spring_trap_cost . '-----'. $spring_trap_time);?><br/><
 print_r('skeleteon trap: '.$skel_trap_cost . '-----'. $skel_trap_time);?><br/><?php
 */
 
-
+//calculating the total costs then placing into session variable
 $_SESSION['overall-total-cost'] = $mortar_total_cost + $archer_total_cost + $cannon_total_cost + $wizard_total_cost
                                 + $air_def_total_cost + $air_sweep_total_cost + $eag_art_cost + $inf_tow_cost + $bomb_tow_total_cost
                                 + $hid_tes_total_cost + $xbow_total_cost + $bombs_cost + $gia_bom_cost + $air_bomb_cost 

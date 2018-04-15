@@ -1,6 +1,11 @@
 <?php
 session_start();
 require_once 'Dao.php';
+
+if(isset($_SESSION['user_id'])){
+  header("Location: home.php");
+}
+
 $dao = new Dao();
 
   $email = $_POST["email"];

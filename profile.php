@@ -1,6 +1,7 @@
 <?php
 session_start();
-?>
+
+/* NOT READY, WILL BE NEXT UPDATE
 
 <html>
   <head>

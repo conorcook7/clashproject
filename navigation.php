@@ -39,6 +39,7 @@ $dao = new Dao();
           <?php if(!empty($user)): 
             $uname = substr($user['email'], 0, strpos($user['email'], '@'));
             ?>
+                                            <!--Prevents from XXS where username is displayed -->
             <a href="profile.php">Welcome, <?=htmlspecialchars($uname);?> !</a>
             <a class="logout-button" href="logout.php">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a>
           <?php else: ?>
@@ -49,7 +50,7 @@ $dao = new Dao();
       </header>
 
       <nav id="navigation" class="nav-bar">
-        <!--<a class="nav-bar-title"></i>Title<span class="nav-bar-exit"><label for="nav-bar-toggle"<i class="fa fa-times-circle" aria-hidden="true"></i></label></span></a>-->
+        <!-- COMING IN LATER UPDATE <a class="nav-bar-title"></i>Title<span class="nav-bar-exit"><label for="nav-bar-toggle"<i class="fa fa-times-circle" aria-hidden="true"></i></label></span></a>-->
 
         <a class="<?php if($page == 'home.php'){echo 'hover active';}?>" href="home.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
           
@@ -59,11 +60,11 @@ $dao = new Dao();
         <a class="<?php if($page == 'login-page.php'){echo 'hover active';}?>" href="login-page.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
         <?php endif; ?>
        
-        <!--<a class="<?php if($page == 'settings.php'){echo 'hover active';}?>" href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
+        <!-- COMING IN LATER UPDATE <a class="<?php if($page == 'settings.php'){echo 'hover active';}?>" href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
         -->
         <a class="<?php if($page == 'progress-tracker-home.php'){echo 'hover active';}?>" href="progress-tracker-home.php"><i class="fa fa-tasks" aria-hidden="true"></i>Progress Tracker</a>
           
-        <!--<a class="<?php if($page == 'profile.php'){echo 'hover active';}?>" href="profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a>
+        <!-- COMING IN LATER UPDATE <a class="<?php if($page == 'profile.php'){echo 'hover active';}?>" href="profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Profile</a>
           -->
         <a class="<?php if($page == 'privacy.php'){echo 'hover active';}?>" href="privacy.php"><i class="fa fa-user-secret" aria-hidden="true"></i>Privacy</a>
       </nav>

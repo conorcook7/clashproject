@@ -1,8 +1,13 @@
 <?php
 session_start();
 require_once 'Dao.php';
-$dao = new Dao();
 
+if(isset($_SESSION['user_id'])){
+  header("Location: home.php");
+}
+
+$dao = new Dao();
+  /* Creates salt and sets session variables */
   $email = $_POST["email"];
   $salt = "youhavebeensalted123$";  
   $password = $_POST["password"] . $salt;
