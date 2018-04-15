@@ -5,6 +5,6 @@
   <div class="name">
      <h1>Conor Cook</h1>
      <h3>&ldquo;Web Dev&rdquo; Novice</h3>
-     <h3>Homework #6</h3>
+     <h3>Homework #7</h3>
   </div>
 </div>
