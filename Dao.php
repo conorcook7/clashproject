@@ -28,8 +28,9 @@ public function createUser(){
         $stmt = $conn->prepare($sql);
     
         $stmt->bindValue(':email', $_POST['email']);
-        /*$stmt->bindValue(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));    */
-        $stmt->bindValue(':password', $_POST['password']);
+        $salt = "youhavebeensalted123$";
+        $hashed = md5($_POST['password'].$salt);
+        $stmt->bindValue(':password', $hashed);    
         if($stmt->execute()):
             return $message= 'Successfully created a user. Please login to your new account.';
         else:
@@ -53,6 +54,19 @@ public function createUser(){
             return true;
         }else{
             return null;
+        }
+    }
+    public function verifyPassword($email, $pass){
+        $conn =$this->getConnection();
+        $records = $conn->prepare('SELECT password FROM users WHERE email = :email');
+        $records->bindValue(':email', $email);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        if(md5($pass) == $results['password']){
+            return true;
+        }else{
+            return false;
         }
     }
     public function regexEmail($email){

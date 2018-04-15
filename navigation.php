@@ -39,7 +39,7 @@ $dao = new Dao();
           <?php if(!empty($user)): 
             $uname = substr($user['email'], 0, strpos($user['email'], '@'));
             ?>
-            <a href="profile.php">Welcome, <?=$uname;?> !</a>
+            <a href="profile.php">Welcome, <?=htmlspecialchars($uname);?> !</a>
             <a class="logout-button" href="logout.php">Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a>
           <?php else: ?>
             <a class="login-btn" href="login-page.php">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>

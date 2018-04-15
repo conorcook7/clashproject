@@ -25,6 +25,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="fadeScript.js"></script>
   </head>
 <body>
     <?php include_once 'banner.php';?>
@@ -33,11 +35,12 @@
       <div class="row"> 	
         <div id="sign-in" class="column">
           <h3>Have an account already?</h3>
-          
           <?php
               if (isset($_SESSION['messages'])) {
+                  $var1 = 1;
                   foreach($_SESSION['messages'] as $message) {
-                    echo "<div class='message'>$message</div>";
+                    echo "<div id='$var1' class='message'>$message <span class='exit-btn'><i class='fa fa-times-circle' aria-hidden='true'></i></span></div>";
+                    $var1++;
                   }
               }else{?>
                 <h5>Please Login Below</h5>
@@ -51,7 +54,6 @@
           </form>
         </div>
 
-        
         <div id="sign-in" class="column">
          <h3>Need to make an account?</h3>
          
@@ -61,8 +63,10 @@
                 echo "<div class='reg_con_message'>$confirm</div>";
               }
               if (isset($_SESSION['regmessages'])) {
+                $var2 = 5;
                   foreach($_SESSION['regmessages'] as $regmessage) {
-                    echo "<div class='regmessage'>$regmessage</div>";
+                    echo "<div id='$var2' class='regmessage'>$regmessage <span class='exit-btn'><i class='fa fa-times-circle' aria-hidden='true'></i></span></div>";
+                  $var2++;
                   }
               }else{ ?>
                 <h5>Please Register Below</h5>
